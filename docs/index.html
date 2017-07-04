@@ -222,6 +222,42 @@ Gulp instalado correctamente!
 });</pre>
                                 </div>
                             </div>
+                            <h5><a href="https://www.npmjs.com/package/gulp-hub" target="_blank" title="gulp-hub">gulp-hub</a></h5>
+                            <div class="row" id="plugins">
+                                <div class="col l5 s5">
+                                    <p>Permite incluir tareas de diferentes archivos:</p>
+                                    <pre>npm i --save-dev gulp-hub</pre>
+                                </div>
+                                <div class="col l7 s7">
+                                    <p>Ejemplo:</p>
+                                    <pre>hub("./src/gulp_tasks/*.js");</pre>
+                                </div>
+                            </div>
+                            <h5><a href="https://www.npmjs.com/package/gulp-sequence" target="_blank" title="gulp-sequence">gulp-sequence</a></h5>
+                            <div class="row" id="plugins">
+                                <div class="col l5 s5">
+                                    <p>Permite ejecutar tareas en paralelo:</p>
+                                    <pre>npm i --save-dev gulp-sequence</pre>
+                                </div>
+                                <div class="col l7 s7">
+                                    <p>Ejemplo:</p>
+                                    <pre>gulp.task('sequence', gulpSequence(
+    ['lint', 'concatenate'],
+    ['minify', 'srcmap']
+  ));</pre>
+                                </div>
+                            </div>
+                            <!--<h5><a href="" target="_blank" title=""></a></h5>
+                            <div class="row" id="plugins">
+                                <div class="col l5 s5">
+                                    <p>:</p>
+                                    <pre>npm i --save-dev </pre>
+                                </div>
+                                <div class="col l7 s7">
+                                    <p>Ejemplo:</p>
+                                    <pre></pre>
+                                </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
