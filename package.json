@@ -1,0 +1,23 @@
+{
+  "name": "gulp",
+  "version": "1.0.0",
+  "description": "Explanation of how it works the Task Runner",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lenin-anzen/gulp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lenin-anzen/gulp/issues"
+  },
+  "homepage": "https://github.com/lenin-anzen/gulp#readme",
+  "devDependencies": {
+    "eslint": "^4.1.1"
+  }
+}
