@@ -18,6 +18,8 @@
                 <li><a href="#gulp-src" title="Gulp SRC">Gulp SRC</a></li>
                 <li><a href="#gulp-dest" title="Gulp Dest">Gulp Dest</a></li>
                 <li><a href="#gulp-watch" title="Gulp Watch">Gulp Watch</a></li>
+                <li><a href="#plugins" title="Plugins">Plugins</a></li>
+                <li><a href="#references" title="Referencias">Referencias</a></li>
             </ul>
             <ul id="nav-mobile" class="side-nav">
                 <li><a href="#installation" title="Instalación">Instalación</a></li>
@@ -25,6 +27,8 @@
                 <li><a href="#gulp-src" title="Gulp SRC">Gulp SRC</a></li>
                 <li><a href="#gulp-dest" title="Gulp Dest">Gulp Dest</a></li>
                 <li><a href="#gulp-watch" title="Gulp Watch">Gulp Watch</a></li>
+                <li><a href="#plugins" title="Plugins">Plugins</a></li>
+                <li><a href="#references" title="Referencias">Referencias</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse">
                 <i class="material-icons">menu</i>
@@ -136,22 +140,101 @@ Gulp instalado correctamente!
                     </div>
                 </div>
             </div>
-            <div class="row" id="">
+            <div class="row" id="plugins">
                 <div class="col l12 s12">
                     <div class="card blue-grey darken-1">
                         <div class="card-content white-text">
-                            <span class="card-title"></span>
+                            <span class="card-title">Plugins</span>
+                            <p>Existen cerca de <a href="http://gulpjs.com/plugins/" target="_blank" title="Pluins">3206 plugins</a>, una muestra de su uso es:.</p>
+                            <h5><a href="https://www.npmjs.com/package/gulp-util" target="_blank" title="gulp-util">gulp-util</a></h5>
+                            <div class="row" id="plugins">
+                                <div class="col l5 s5">
+                                    <p>Funciones para los plugins de gulp.</p>
+                                    <pre>npm i --save-dev gulp-util</pre>
+                                </div>
+                                <div class="col l7 s7">
+                                    <p>Ejemplo:</p>
+                                    <pre>gutil.log(gutil.colors.magenta('Cambio de color'));</pre>
+                                </div>
+                            </div>
+                            <h5><a href="https://www.npmjs.com/package/gulp-concat" target="" title="gulp-concat">gulp-concat</a></h5>
+                            <div class="row" id="plugins">
+                                <div class="col l5 s5">
+                                    <p>Concatena archivos</p>
+                                    <pre>npm i --save-dev gulp-concat</pre>
+                                </div>
+                                <div class="col l7 s7">
+                                    <p>Ejemplo:</p>
+                                    <pre>gulp.task('concatenate', function() {
+  return gulp.src('./src/lib/*.js')
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('./dist/'));
+});</pre>
+                                </div>
+                            </div>
+                            <h5><a href="https://www.npmjs.com/package/gulp-uglify" target="_blank" title="gulp-uglify">gulp-uglify</a></h5>
+                            <div class="row" id="plugins">
+                                <div class="col l5 s5">
+                                    <p>Minificación de archivos:</p>
+                                    <pre>npm i --save-dev gulp-uglify</pre>
+                                </div>
+                                <div class="col l7 s7">
+                                    <p>Ejemplo:</p>
+                                    <pre>gulp.task('minify', function() {
+  return gulp.src('./src/lib/*.js')
+    .pipe(concat('min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/'));
+});</pre>
+                                </div>
+                            </div>
+                            <h5><a href="https://www.npmjs.com/package/gulp-eslint" target="_blank" title="gulp-eslint">gulp-eslint</a></h5>
+                            <div class="row" id="plugins">
+                                <div class="col l5 s5">
+                                    <p>Permite ejecutar ESLint mediante Gulp</p>
+                                    <pre>npm i --save-dev gulp-eslint eslint</pre>
+                                </div>
+                                <div class="col l7 s7">
+                                    <p>Ejemplo:</p>
+                                    <pre>gulp.task('lint', function() {
+  return gulp.src(['**/*.js','!node_modules/**'])
+  	.pipe(eslint())
+    .pipe(eslint.format())
+  	.pipe(eslint.failAfterError());
+});</pre>
+                                </div>
+                            </div>
+                            <h5><a href="https://www.npmjs.com/package/gulp-sourcemaps" target="_blank" title="gulp-sourcemaps">gulp-sourcemaps</a></h5>
+                            <div class="row" id="plugins">
+                                <div class="col l5 s5">
+                                    <p>Generar source maps:</p>
+                                    <pre>npm i --save-dev gulp-sourcemaps</pre>
+                                </div>
+                                <div class="col l7 s7">
+                                    <p>Ejemplo:</p>
+                                    <pre>gulp.task('scrmap', function() {
+  gulp.src('./src/**/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(concat('min-srcmap.js'))
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('dist'));
+});</pre>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row" id="">
+            <div class="row" id="references">
                 <div class="col l12 s12">
                     <div class="card blue-grey darken-1">
                         <div class="card-content white-text">
                             <span class="card-title">Referencias</span>
                             <ul>
                                 <li><p><a href="https://www.adictosaltrabajo.com/tutoriales/primeros-pasos-con-gulp/" target="_blank" title="Primeros pasos con Gulp">Primeros pasos con Gulp</a></p></li>
+                                <li><p><a href="https://scotch.io/tutorials/automate-your-tasks-easily-with-gulp-js" target="_blank" title="Automate Your Tasks Easily with Gulp.js">Automate Your Tasks Easily with Gulp.js</a></p></li>
+                                <li><p><a href="https://ilikekillnerds.com/2014/11/10-highly-useful-gulp-js-plugins-for-a-super-ninja-front-end-workflow/" target="_blank" title="10 Highly Useful Gulp.js Plugins For A Super Ninja Front-end Workflow">10 Highly Useful Gulp.js Plugins For A Super Ninja Front-end Workflow</a></p></li>
                             </ul>
                         </div>
                     </div>
